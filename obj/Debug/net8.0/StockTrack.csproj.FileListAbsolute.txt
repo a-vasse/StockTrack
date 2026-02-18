@@ -1,0 +1,14 @@
+C:\Users\Vasse\Documents\Inedo\StockTrack\bin\Debug\net8.0\StockTrack.exe
+C:\Users\Vasse\Documents\Inedo\StockTrack\bin\Debug\net8.0\StockTrack.deps.json
+C:\Users\Vasse\Documents\Inedo\StockTrack\bin\Debug\net8.0\StockTrack.runtimeconfig.json
+C:\Users\Vasse\Documents\Inedo\StockTrack\bin\Debug\net8.0\StockTrack.dll
+C:\Users\Vasse\Documents\Inedo\StockTrack\bin\Debug\net8.0\StockTrack.pdb
+C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\StockTrack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\StockTrack.AssemblyInfoInputs.cache
+C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\StockTrack.AssemblyInfo.cs
+C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\StockTrack.csproj.CoreCompileInputs.cache
+C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\StockTrack.dll
+C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\refint\StockTrack.dll
+C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\StockTrack.pdb
+C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\StockTrack.genruntimeconfig.cache
+C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\ref\StockTrack.dll

@@ -12,3 +12,4 @@ C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\refint\StockTrack.dll
 C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\StockTrack.pdb
 C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\StockTrack.genruntimeconfig.cache
 C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\ref\StockTrack.dll
+C:\Users\Vasse\Documents\Inedo\StockTrack\obj\Debug\net8.0\StockTrack.sourcelink.json

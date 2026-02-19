@@ -61,12 +61,21 @@ namespace StockTrack
                 return;
             }
 
-            Console.Write("Warehouse Location: ");
-            var location = Console.ReadLine() ?? string.Empty;
+            Console.Write("Zone (e.g., A, B, C): ");
+            var zone = Console.ReadLine() ?? string.Empty;
 
-            if (string.IsNullOrWhiteSpace(location))
+            if (string.IsNullOrWhiteSpace(zone))
             {
-                Console.WriteLine("Location cannot be empty.");
+                Console.WriteLine("Zone cannot be empty.");
+                return;
+            }
+
+            Console.Write("Bin (e.g., 1, 2, 3): ");
+            var bin = Console.ReadLine() ?? string.Empty;
+
+            if (string.IsNullOrWhiteSpace(bin))
+            {
+                Console.WriteLine("Bin cannot be empty.");
                 return;
             }
 
@@ -75,7 +84,8 @@ namespace StockTrack
                 CustomerName = customer,
                 SKU = sku,
                 Quantity = quantity,
-                WarehouseLocation = location
+                Zone = zone,
+                Bin = bin
             };
 
             service.AddItem(item);
@@ -101,7 +111,7 @@ namespace StockTrack
 
                 foreach (var item in group)
                 {
-                    Console.WriteLine($"  {item.SKU} | Qty: {item.Quantity} | {item.WarehouseLocation}");
+                    Console.WriteLine($"  {item.SKU} | Qty: {item.Quantity} | Location: {item.Zone}{item.Bin}");
                 }
             }
         }

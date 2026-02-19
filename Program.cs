@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using StockTrack.Models;
 using StockTrack.Services;
 
@@ -86,9 +87,22 @@ namespace StockTrack
         {
             var items = service.GetAllItems();
 
-            foreach (var item in items)
+            if (items.Count == 0)
             {
-                Console.WriteLine($"{item.CustomerName} | {item.SKU} | Qty: {item.Quantity} | {item.WarehouseLocation}");
+                Console.WriteLine("No inventory found.");
+                return;
+            }
+
+            var grouped = items.GroupBy(i => i.CustomerName);
+
+            foreach (var group in grouped)
+            {
+                Console.WriteLine($"\nCustomer: {group.Key}");
+
+                foreach (var item in group)
+                {
+                    Console.WriteLine($"  {item.SKU} | Qty: {item.Quantity} | {item.WarehouseLocation}");
+                }
             }
         }
     }

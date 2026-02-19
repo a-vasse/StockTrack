@@ -16,6 +16,7 @@ namespace StockTrack
                 Console.WriteLine("1. Add Inventory");
                 Console.WriteLine("2. View Inventory");
                 Console.WriteLine("3. Exit");
+                Console.WriteLine("5. About");
 
                 var input = Console.ReadLine();
 
@@ -29,6 +30,9 @@ namespace StockTrack
                         break;
                     case "3":
                         return;
+                    case "5":
+                        ShowAbout();
+                    break;
                 }
             }
         }
@@ -68,6 +72,14 @@ namespace StockTrack
             {
                 Console.WriteLine($"{item.CustomerName} | {item.SKU} | Qty: {item.Quantity} | {item.WarehouseLocation}");
             }
+        }
+
+        static void ShowAbout()
+        {
+            Console.WriteLine("\n--- LogistiCorp StockTrack ---");
+            Console.WriteLine("Version: 1.0");
+            Console.WriteLine("A mini logistics inventory tool for mid-sized warehouses.");
+            Console.WriteLine("Developed for learning Git branching and commits.");
         }
     }
 }

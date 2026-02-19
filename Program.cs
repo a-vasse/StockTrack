@@ -36,16 +36,38 @@ namespace StockTrack
         static void AddInventory(InventoryService service)
         {
             Console.Write("Customer: ");
-            var customer = Console.ReadLine();
+            var customer = Console.ReadLine() ?? string.Empty;
+
+            if (string.IsNullOrWhiteSpace(customer))
+            {
+                Console.WriteLine("Customer cannot be empty.");
+                return;
+            }
 
             Console.Write("SKU: ");
-            var sku = Console.ReadLine();
+            var sku = Console.ReadLine() ?? string.Empty;
+
+            if (string.IsNullOrWhiteSpace(sku))
+            {
+                Console.WriteLine("SKU cannot be empty.");
+                return;
+            }
 
             Console.Write("Quantity: ");
-            var quantity = int.Parse(Console.ReadLine() ?? "0");
+            if (!int.TryParse(Console.ReadLine(), out int quantity) || quantity < 0)
+            {
+                Console.WriteLine("Invalid quantity.");
+                return;
+            }
 
             Console.Write("Warehouse Location: ");
-            var location = Console.ReadLine();
+            var location = Console.ReadLine() ?? string.Empty;
+
+            if (string.IsNullOrWhiteSpace(location))
+            {
+                Console.WriteLine("Location cannot be empty.");
+                return;
+            }
 
             var item = new InventoryItem
             {

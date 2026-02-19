@@ -11,6 +11,8 @@ namespace StockTrack
         {
             var inventoryService = new InventoryService();
 
+            inventoryService.Load();
+
             while (true)
             {
                 Console.WriteLine("\n--- LogistiCorp StockTrack ---");
@@ -34,6 +36,8 @@ namespace StockTrack
                         TransferInventory(inventoryService);
                         break;
                     case "4":
+                        inventoryService.Save();
+                        Console.WriteLine("Inventory saved. Goodbye!");
                         return;
                 }
             }

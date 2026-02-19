@@ -69,5 +69,13 @@ namespace StockTrack
                 Console.WriteLine($"{item.CustomerName} | {item.SKU} | Qty: {item.Quantity} | {item.WarehouseLocation}");
             }
         }
+
+        static void ShowAbout()
+        {
+            Console.WriteLine("\n--- LogistiCorp StockTrack ---");
+            Console.WriteLine("Version: 1.0");
+            Console.WriteLine("A mini logistics inventory tool for mid-sized warehouses.");
+            Console.WriteLine("Developed for learning Git branching and commits.");
+        }
     }
 }

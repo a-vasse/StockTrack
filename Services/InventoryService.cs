@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using StockTrack.Models;
 
 namespace StockTrack.Services
@@ -15,6 +16,18 @@ namespace StockTrack.Services
         public List<InventoryItem> GetAllItems()
         {
             return _items;
+        }
+
+        public bool TransferItem(string customerName, string sku, string newZone, string newBin)
+        {
+            var item = _items.FirstOrDefault(i => i.CustomerName == customerName && i.SKU == sku);
+
+            if (item == null)
+                return false;
+
+            item.Zone = newZone;
+            item.Bin = newBin;
+            return true;
         }
     }
 }

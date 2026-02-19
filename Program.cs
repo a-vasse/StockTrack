@@ -16,7 +16,9 @@ namespace StockTrack
                 Console.WriteLine("\n--- LogistiCorp StockTrack ---");
                 Console.WriteLine("1. Add Inventory");
                 Console.WriteLine("2. View Inventory");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("3. Transfer Inventory");
+                Console.WriteLine("4. Exit");
+
 
                 var input = Console.ReadLine();
 
@@ -29,6 +31,9 @@ namespace StockTrack
                         ViewInventory(inventoryService);
                         break;
                     case "3":
+                        TransferInventory(inventoryService);
+                        break;
+                    case "4":
                         return;
                 }
             }
@@ -114,6 +119,28 @@ namespace StockTrack
                     Console.WriteLine($"  {item.SKU} | Qty: {item.Quantity} | Location: {item.Zone}{item.Bin}");
                 }
             }
+        }
+
+        static void TransferInventory(InventoryService service)
+        {
+            Console.Write("Customer: ");
+            var customer = Console.ReadLine() ?? string.Empty;
+
+            Console.Write("SKU: ");
+            var sku = Console.ReadLine() ?? string.Empty;
+
+            Console.Write("New Zone: ");
+            var newZone = Console.ReadLine() ?? string.Empty;
+
+            Console.Write("New Bin: ");
+            var newBin = Console.ReadLine() ?? string.Empty;
+
+            bool success = service.TransferItem(customer, sku, newZone, newBin);
+
+            if (success)
+                Console.WriteLine("Inventory transferred successfully!");
+            else
+                Console.WriteLine("Item not found.");
         }
     }
 }
